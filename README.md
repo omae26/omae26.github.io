@@ -63,3 +63,11 @@ Electronic and Computer Engineering graduate with hands-on experience in first-l
 * 🏆 **IT Customer Support Basics**, Cisco Networking Academy
 * 🏆 **Network Basics**, Cisco Networking Academy
 * 🏆 **Soft Skills Training**, McKinsey Forward Program
+
+---
+
+## Contact info
+* Email: teresiakemunto8@gmail.com
+* Contact No: 0796173506
+* Github: github.com/omae26/
+  
