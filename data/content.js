@@ -182,6 +182,7 @@ window.SITE = {
      1. Save the image in  assets/designs/  (e.g. poster-1.jpg)
      2. Add a line below. Leave the list empty to show a friendly placeholder.        */
   designs: [
+     {title: "Jewels Manifest Clinic", type: "Poster", image: "assets/designs/JewelsManifestClinicPoster.jpg"},
     // { title: "Event poster", type: "Poster", image: "assets/designs/poster-1.jpg" },
   ],
 
