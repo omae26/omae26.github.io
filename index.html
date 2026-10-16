@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teresia Kemunto Omae | Electronic & Computer Engineer</title>
+  <meta name="description" content="Portfolio of Teresia Kemunto Omae: Electronic & Computer Engineer specialising in network operations, technical support, cloud and network security, and graphic design. Based in Nairobi, Kenya.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Teresia Kemunto Omae | Electronic & Computer Engineer">
+  <meta property="og:description" content="Network operations, technical support, security and design. Nairobi, Kenya.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%2310d99a'%3ETK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#home" aria-label="Back to top">TK<span>.</span></a>
+    <nav aria-label="Main">
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#certs">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <div class="accent-picker" role="group" aria-label="Accent colour">
+        <button data-accent="emerald" title="Emerald" aria-label="Emerald theme"></button>
+        <button data-accent="teal" title="Teal" aria-label="Teal theme"></button>
+        <button data-accent="burgundy" title="Burgundy" aria-label="Burgundy theme"></button>
+      </div>
+      <a class="btn btn-sm" id="cvTop" href="#" download>CV</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge" id="openBadge"><i></i> Open to work</span>
+          <p class="eyebrow">Hello, I'm</p>
+          <h1 id="heroName">Teresia Kemunto Omae</h1>
+          <p class="role-line"><span id="roleType"></span><span class="caret">_</span></p>
+          <p class="lead" id="heroIntro"></p>
+          <div class="cta">
+            <a class="btn" href="#projects">View my work</a>
+            <a class="btn btn-ghost" href="#contact">Let's connect</a>
+            <a class="btn btn-ghost" id="cvHero" href="#" download>Download CV</a>
+          </div>
+          <ul class="socials" id="socials"></ul>
+        </div>
+
+        <aside class="noc" aria-label="Simulated network operations panel">
+          <div class="noc-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="noc-title">noc://poa-distribution</span>
+            <span class="live"><i></i>SIM</span>
+          </div>
+          <div class="noc-body">
+            <div class="term" id="term"></div>
+            <div class="noc-chart">
+              <div class="noc-row"><span>Latency</span><b id="latNow">-- ms</b></div>
+              <svg id="spark" viewBox="0 0 300 70" preserveAspectRatio="none" aria-hidden="true">
+                <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".35"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
+                <path id="sparkFill" fill="url(#g)"/><path id="sparkLine" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="nodes" id="nodes" aria-hidden="true"></div>
+            <p class="noc-note">Illustrative animation of the monitoring work I did. Not live data.</p>
+          </div>
+        </aside>
+      </div>
+      <div class="wrap"><div class="stats" id="stats"></div></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="sec">
+      <div class="wrap">
+        <p class="label">// 01 — About</p>
+        <h2>Engineering with <em>care</em> and a designer's eye</h2>
+        <div class="about-grid">
+          <div class="about-text" id="aboutText"></div>
+          <div class="about-card">
+            <div class="avatar" id="avatar"><span id="avatarInitials">TK</span></div>
+            <dl>
+              <dt>Based in</dt><dd id="aLoc"></dd>
+              <dt>Education</dt><dd>B.Sc. Electronic & Computer Engineering, JKUAT</dd>
+              <dt>Focus</dt><dd>NOC · Support · Security · Design</dd>
+            </dl>
+          </div>
+        </div>
+
+        <h3 class="sub">Experience &amp; education</h3>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise" class="sec alt">
+      <div class="wrap">
+        <p class="label">// 02 — Expertise</p>
+        <h2>What I bring to a team</h2>
+        <div class="cards" id="expertiseCards"></div>
+
+        <h3 class="sub">Toolbox</h3>
+        <div class="tools" id="tools"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="sec">
+      <div class="wrap">
+        <p class="label">// 03 — Projects</p>
+        <h2>Case files &amp; builds</h2>
+        <div class="filters" id="projFilters" role="group" aria-label="Filter projects"></div>
+        <div class="proj-grid" id="projGrid"></div>
+      </div>
+    </section>
+
+    <!-- DESIGN -->
+    <section id="design" class="sec alt">
+      <div class="wrap">
+        <p class="label">// 04 — Design</p>
+        <h2>Graphic design studio</h2>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- CERTS -->
+    <section id="certs" class="sec">
+      <div class="wrap">
+        <p class="label">// 05 — Certificates &amp; courses</p>
+        <h2>Always learning</h2>
+        <div class="filters" id="certFilters" role="group" aria-label="Filter certificates"></div>
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="sec alt">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="label">// 06 — Contact</p>
+          <h2>Let's work together</h2>
+          <p class="lead">Looking for a graduate engineer for NOC, IT support, systems or security work, or a designer for a project? Send a message.</p>
+          <ul class="contact-list" id="contactList"></ul>
+        </div>
+        <form class="form" id="form" novalidate>
+          <div class="two">
+            <label>Name<input name="name" required autocomplete="name"></label>
+            <label>Email<input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <label>Subject
+            <select name="subject">
+              <option>Job opportunity</option>
+              <option>Internship / graduate programme</option>
+              <option>Design project</option>
+              <option>Collaboration</option>
+              <option>Just saying hi</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Teresia Kemunto Omae. Built with care in Nairobi.</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden><button aria-label="Close">×</button><img alt=""></div>
+
+  <script src="data/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
