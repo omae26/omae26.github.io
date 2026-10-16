@@ -32,7 +32,7 @@ window.SITE = {
   intro:
     "I keep networks alive and systems secure, and I make things look good while doing it. " +
     "Electronic & Computer Engineering graduate with hands-on experience in live network monitoring, " +
-    "IT support, database operations and industrial systems, now growing into cloud and network security.",
+    "IT support, database management and industrial systems, now growing into cloud and network security.",
 
   about: [
     "I'm an Electronic and Computer Engineering graduate from JKUAT with hands-on experience in first-level IT support, network monitoring, hardware and software troubleshooting, database support and technical operations.",
