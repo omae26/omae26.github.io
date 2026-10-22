@@ -89,7 +89,7 @@ window.SITE = {
   /* ---------- Education (add more entries the same way) ---------- */
   education: [
     {
-      degree: "B.Sc. Electronic and Computer Engineering",
+      degree: "BSc Electronic and Computer Engineering",
       school: "Jomo Kenyatta University of Agriculture and Technology (JKUAT)",
       place: "Juja, Kenya",
       period: "2021 – 2026",
@@ -103,7 +103,7 @@ window.SITE = {
       icon: "network",
       title: "Networking & NOC",
       text: "Live monitoring, incident triage and escalation across distributed IP networks. Network device configurations.",
-      tags: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "TCP/IP", "VPN & IPSec" "Routers & switches configs", "Network monitoring"]
+      tags: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "TCP/IP", "VPN & IPSec", "Routers & switches configs", "Network monitoring"]
     },
     {
       icon: "shield",
@@ -115,13 +115,13 @@ window.SITE = {
       icon: "server",
       title: "Systems Administration",
       text: "Setting up, imaging and maintaining Windows and Linux environments.",
-      tags: ["Windows Admin", "Linux install", "Active Directory", "OS imaging & deployment"]
+      tags: ["Windows Admin", "Linux", "Active Directory", "OS imaging & deployment"]
     },
     {
       icon: "code",
       title: "Programming",
       text: "Database configuration, Front-end development, migrations.",
-      tags: ["PHP", "Python ", "HTML", "CSS", "JavaScript" "Data migration", "Indexing & caching", "Performance testing"]
+      tags: ["PHP", "Python ", "HTML", "CSS", "JavaScript", "Data migration", "Indexing & caching", "Performance testing"]
     },
     {
       icon: "bolt",
@@ -208,7 +208,7 @@ window.SITE = {
 
   /* ---------- Toolbox ---------- */
   tools: [
-    { group: "Networking", items: ["IP addressing", "DNS", "DHCP", "LAN / WAN", "VLAN", "VPN/IPSec", "Wireshark", "Packet Tracer"] },
+    { group: "Networking", items: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "VLAN", "VPN/IPSec", "Wireshark", "Packet Tracer"] },
     { group: "Systems", items: ["Windows Admin", "Linux", "Active Directory", "OS imaging", "Patching & updates"] },
     { group: "Programming", items: ["PHP", "Python ", "HTML/CSS/JS", "SQL", "Data migration"] },
     { group: "Security", items: ["Backups & recovery", "Cybersecurity awareness", "Cloud security (learning)"] },
