@@ -19,6 +19,7 @@ window.SITE = {
     phone: "+254 796 173 506",
     linkedin: "https://www.linkedin.com/in/teresia-kemunto",
     github: "https://github.com/omae26",
+    credly: "",              // e.g. "https://www.credly.com/users/your-name"  (leave "" to hide)
     behance: "",             // optional, e.g. "https://www.behance.net/your-name"
     cv: "assets/Teresia_Kemunto_Omae_CV.pdf",
     photo: "assets/profile.jpg",   // drop a photo at this path; initials show until then
@@ -32,7 +33,7 @@ window.SITE = {
   intro:
     "I keep networks alive and systems secure, and I make things look good while doing it. " +
     "Electronic & Computer Engineering graduate with hands-on experience in live network monitoring, " +
-    "IT support, database management and industrial systems, now growing into cloud and network security.",
+    "IT support, database operations and industrial systems, now growing into cloud and network security.",
 
   about: [
     "I'm an Electronic and Computer Engineering graduate from JKUAT with hands-on experience in first-level IT support, network monitoring, hardware and software troubleshooting, database support and technical operations.",
@@ -48,8 +49,8 @@ window.SITE = {
     { value: 3,  suffix: "",  label: "Industry attachments" }
   ],
 
-  /* ---------- Experience & education (newest first) ---------- */
-  timeline: [
+  /* ---------- Work experience (newest first) ---------- */
+  experience: [
     {
       role: "NOC Technician Intern",
       org: "Poa! Internet Ltd.",
@@ -82,14 +83,17 @@ window.SITE = {
         "Installed and serviced control switches for 20+ units while keeping accurate equipment records and following safety requirements.",
         "Planned preventive maintenance schedules to improve reliability and minimise unplanned disruption."
       ]
-    },
+    }
+  ],
+
+  /* ---------- Education (add more entries the same way) ---------- */
+  education: [
     {
-      role: "B.Sc. Electronic and Computer Engineering",
-      org: "Jomo Kenyatta University of Agriculture and Technology (JKUAT)",
+      degree: "B.Sc. Electronic and Computer Engineering",
+      school: "Jomo Kenyatta University of Agriculture and Technology (JKUAT)",
       place: "Juja, Kenya",
       period: "2021 – 2026",
-      points: [],
-      education: true
+      notes: []   // optional: ["Final-year project: ...", "Relevant units: ..."]
     }
   ],
 
@@ -182,19 +186,20 @@ window.SITE = {
      1. Save the image in  assets/designs/  (e.g. poster-1.jpg)
      2. Add a line below. Leave the list empty to show a friendly placeholder.        */
   designs: [
-     {title: "Jewels Manifest Clinic", type: "Poster", image: "assets/designs/poster-1.jpg"},
     // { title: "Event poster", type: "Poster", image: "assets/designs/poster-1.jpg" },
   ],
 
   /* ---------- Certifications & short courses ----------
      type: "certification" | "course"      status: "Completed" | "Ongoing"
-     link (optional): credential URL.   image (optional): assets/certs/xyz.png         */
+     link (optional): Credly / Coursera / issuer verification URL (best option).
+     file (optional): a PDF in assets/certs/, e.g. "assets/certs/google-it.pdf".
+     image (optional): a picture in assets/certs/, shown as a preview.         */
   certificates: [
-    { title: "Google IT Support Professional Certificate", issuer: "Coursera", type: "certification", status: "Completed", year: "", link: "", image: "" },
-    { title: "Network Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", image: "" },
-    { title: "IT Customer Support Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", image: "" },
-    { title: "Soft Skills Training", issuer: "McKinsey Forward Program", type: "course", status: "Completed", year: "", link: "", image: "" },
-    { title: "Cloud & Network Security", issuer: "Cybershujaa", type: "course", status: "Ongoing", year: "", link: "", image: "" }
+    { title: "Google IT Support Professional Certificate", issuer: "Coursera", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
+    { title: "Network Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
+    { title: "IT Customer Support Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
+    { title: "Soft Skills Training", issuer: "McKinsey Forward Program", type: "course", status: "Completed", year: "", link: "", file: "", image: "" },
+    { title: "Cloud & Network Security", issuer: "Cybershujaa", type: "course", status: "Ongoing", year: "", link: "", file: "", image: "" }
   ],
 
   /* ---------- Toolbox ---------- */

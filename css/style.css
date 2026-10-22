@@ -219,3 +219,23 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);
   .sec{padding:72px 0}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+
+/* hero photo */
+.hero-photo{width:112px;height:112px;border-radius:50%;margin-bottom:22px;border:2px solid var(--accent);padding:4px;background:#000;box-shadow:0 0 0 6px rgba(var(--accent-rgb),.1),0 0 40px rgba(var(--accent-rgb),.25);display:grid;place-items:center;font:700 2rem var(--f-head);overflow:hidden}
+.hero-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.hero-photo:not(.has-photo){background:radial-gradient(circle at 30% 20%,rgba(var(--accent-rgb),.3),#000)}
+.badge{margin-bottom:18px}
+/* experience vs education */
+.sub-ic{font:500 .8rem var(--f-mono);color:var(--on-accent);background:var(--accent);padding:3px 8px;border-radius:6px;margin-right:10px;vertical-align:middle}
+.edu-grid{display:grid;gap:16px}
+.edu-card{display:flex;gap:20px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--r);padding:26px}
+.edu-ic{flex:none;width:48px;height:48px;border-radius:12px;background:rgba(var(--accent-rgb),.12);display:grid;place-items:center;color:var(--accent)}
+.edu-ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.edu-card .when{font:.78rem var(--f-mono);color:var(--accent)}
+.edu-card h4{font:600 1.2rem var(--f-head);margin:4px 0 2px}
+.edu-card .org{color:var(--muted);font-size:.92rem}
+.edu-card ul{margin-top:10px;display:grid;gap:6px}.edu-card li{color:#b9c4c1;font-size:.95rem}
+.cert-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+.cert-links .view{margin:0}
+
+.cert-profile-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}.cert-profile-links:empty{display:none}

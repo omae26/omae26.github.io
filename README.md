@@ -19,6 +19,16 @@ Everything you'd change is in **`data/content.js`**.
 2. Copy an existing `{ ... },` block (for example a certificate), paste it underneath, and change the text.
 3. Click **Commit changes**. The live site refreshes in about a minute.
 
+### Education vs experience
+They are separate lists in `data/content.js`: `timeline` is work experience (jobs, internships, attachments) and `education` is degrees and schools. Add a new degree or diploma by copying the block in `education`.
+
+### Certificates: link, don't just upload
+Best practice, in order of preference:
+1. Put the issuer's **verification link** in `link` (Credly, Coursera, Cisco Networking Academy, Credential ID pages). Employers can verify it, and it can't be faked.
+2. Add a **preview image** in `image` (JPG, under 300 KB) so the card looks complete. Hide ID numbers and personal details first.
+3. Put your Credly profile URL in `credly` and a **"All badges on Credly"** button appears. A **LinkedIn certifications** button appears automatically.
+Having them only on LinkedIn is not enough on its own, since hiring teams often check the portfolio first. Link both.
+
 ### Add a certificate or short course
 Copy a line in `certificates`. Set `type` to `"certification"` or `"course"`, `status` to `"Completed"` or `"Ongoing"`. Optional: `link` (credential URL) and `image` (upload the picture to `assets/certs/` and use `"assets/certs/name.png"`).
 
@@ -30,7 +40,7 @@ Upload images to `assets/designs/` (GitHub: **Add file → Upload files**), then
 `{ title: "Event poster", type: "Poster", image: "assets/designs/poster-1.jpg" },`
 
 ### Add your photo
-Upload a square-ish photo named `profile.jpg` into `assets/`. It replaces the TK initials automatically.
+Upload a square photo named exactly `profile.jpg` into the `assets/` folder (on GitHub: open `assets` → **Add file → Upload files**). It appears automatically in a round frame at the top of the home page and in the About card. Tip: use a head-and-shoulders shot, at least 600×600 px, under 500 KB.
 
 ### Add your GitHub / Behance links
 Fill in `github` and `behance` in the `profile` section. Empty links stay hidden.

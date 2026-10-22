@@ -25,8 +25,11 @@
   if (!P.openToWork) $("#openBadge").style.display = "none";
   $("#aboutText").innerHTML = S.about.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
   $("#avatarInitials").textContent = P.initials;
+  $("#heroInitials").textContent = P.initials;
   if (P.photo) {
-    var im = new Image(); im.alt = P.name; im.onload = function () { $("#avatar").innerHTML = ""; $("#avatar").appendChild(im); }; im.src = P.photo;
+    [$("#avatar"), $("#heroPhoto")].forEach(function (box) {
+      var im = new Image(); im.alt = P.name; im.onload = function () { box.innerHTML = ""; box.classList.add("has-photo"); box.appendChild(im); }; im.src = P.photo;
+    });
   }
 
   var ICONS = {
@@ -54,9 +57,13 @@
   }
 
   /* ---------- Timeline ---------- */
-  $("#timeline").innerHTML = S.timeline.map(function (t) {
-    return '<li class="tl rv' + (t.education ? " edu" : "") + '"><span class="when">' + esc(t.period) + "</span><h4>" + esc(t.role) + '</h4><div class="org">' + esc(t.org) + " · " + esc(t.place) + "</div>" +
+  $("#timeline").innerHTML = S.experience.map(function (t) {
+    return '<li class="tl rv"><span class="when">' + esc(t.period) + "</span><h4>" + esc(t.role) + '</h4><div class="org">' + esc(t.org) + " · " + esc(t.place) + "</div>" +
       (t.points && t.points.length ? "<ul>" + t.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" : "") + "</li>";
+  }).join("");
+  $("#education").innerHTML = S.education.map(function (e) {
+    return '<article class="edu-card rv"><div class="edu-ic"><svg viewBox="0 0 24 24"><path d="M12 4L2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1.2 2.7 3 6 3s6-1.8 6-3v-4.5"/></svg></div><div><span class="when">' + esc(e.period) + "</span><h4>" + esc(e.degree) + '</h4><div class="org">' + esc(e.school) + " · " + esc(e.place) + "</div>" +
+      (e.notes && e.notes.length ? "<ul>" + e.notes.map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("") + "</ul>" : "") + "</div></article>";
   }).join("");
 
   /* ---------- Expertise ---------- */
@@ -123,9 +130,13 @@
       var ong = /ongoing/i.test(c.status);
       return '<article class="cert rv in"><div class="meta"><span>' + esc(c.type === "course" ? "COURSE" : "CERTIFICATION") + '</span><span class="st' + (ong ? " ongoing" : "") + '">' + (ong ? "◐ " : "✓ ") + esc(c.status) + (c.year ? " · " + esc(c.year) : "") + "</span></div><h3>" + esc(c.title) + '</h3><div class="iss">' + esc(c.issuer) + "</div>" +
         (c.image ? '<img loading="lazy" src="' + esc(c.image) + '" alt="' + esc(c.title) + ' certificate">' : "") +
-        (c.link ? '<a class="view" href="' + esc(c.link) + '" target="_blank" rel="noopener">View credential ↗</a>' : "") + "</article>";
+        ((c.link || c.file) ? '<div class="cert-links">' + (c.link ? '<a class="view" href="' + esc(c.link) + '" target="_blank" rel="noopener">Verify credential ↗</a>' : "") + (c.file ? '<a class="view" href="' + esc(c.file) + '" target="_blank" rel="noopener">View certificate (PDF) ↗</a>' : "") + "</div>" : "") + "</article>";
     }).join("");
   }
+  var cLinks = [];
+  if (P.credly) cLinks.push(["All badges on Credly", P.credly]);
+  if (P.linkedin) cLinks.push(["Certifications on LinkedIn", P.linkedin.replace(/\/$/, "") + "/details/certifications/"]);
+  $("#certLinks").innerHTML = cLinks.map(function (l) { return '<a class="btn btn-ghost btn-sm" href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + " ↗</a>"; }).join("");
   filters($("#certFilters"), uniq(S.certificates.map(function (c) { return c.type; })), typeLabels, renderCerts);
   renderCerts("all");
 
