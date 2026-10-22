@@ -188,6 +188,8 @@ window.SITE = {
   designs: [
     // { title: "Event poster", type: "Poster", image: "assets/designs/poster-1.jpg" },
      { title: "Event poster", type: "Poster", image: "assets/designs/poster-1.png" },
+     { title: "Business flyer", type: "Poster", image: "assets/designs/poster-2.jpeg" },
+     
   ],
 
   /* ---------- Certifications & short courses ----------
