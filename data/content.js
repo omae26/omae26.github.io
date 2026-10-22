@@ -19,7 +19,7 @@ window.SITE = {
     phone: "+254 796 173 506",
     linkedin: "https://www.linkedin.com/in/teresia-kemunto",
     github: "https://github.com/omae26",
-    credly: "https://www.credly.com/users/teresia-omae.",    // e.g. "https://www.credly.com/users/your-name"  (leave "" to hide)
+    credly: "https://www.credly.com/users/teresia-omae",    // e.g. "https://www.credly.com/users/your-name"  (leave "" to hide)
     behance: "",             // optional, e.g. "https://www.behance.net/your-name"
     cv: "assets/Teresia_Kemunto_Omae_CV.pdf",
     photo: "assets/profile.jpg",   // drop a photo at this path; initials show until then
@@ -189,7 +189,7 @@ window.SITE = {
     // { title: "Event poster", type: "Poster", image: "assets/designs/poster-1.jpg" },
      { title: "Event poster", type: "Poster", image: "assets/designs/poster-1.png" },
      { title: "Business flyer", type: "Poster", image: "assets/designs/poster-2.jpeg" },
-     { title: "Event poster", type: "Poster", image: "assets/designs/poster-3.jpeg" },
+     { title: "Church poster", type: "Poster", image: "assets/designs/poster-3.jpeg" },
      
   ],
 
@@ -212,7 +212,7 @@ window.SITE = {
     { group: "Systems", items: ["Windows Admin", "Linux", "Active Directory", "OS imaging", "Patching & updates"] },
     { group: "Programming", items: ["PHP", "Python ", "HTML/CSS/JS", "SQL", "Data migration"] },
     { group: "Security", items: ["Backups & recovery", "Cybersecurity awareness", "Cloud security (learning)"] },
-    { group: "Graphic Design", items: ["PhotoShop", "Canva", "CapCut", "DaVinci Resolve" "Branding", "Video Editing"] },
+    { group: "Graphic Design", items: ["PhotoShop", "Canva", "CapCut", "DaVinci Resolve", "Branding", "Video Editing"] },
     { group: "Industrial", items: ["Motors", "Generators", "Industrial control systems"] }
   ]
 };
