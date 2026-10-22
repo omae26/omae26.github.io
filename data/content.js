@@ -19,7 +19,7 @@ window.SITE = {
     phone: "+254 796 173 506",
     linkedin: "https://www.linkedin.com/in/teresia-kemunto",
     github: "https://github.com/omae26",
-    credly: "",              // e.g. "https://www.credly.com/users/your-name"  (leave "" to hide)
+    credly: "https://www.credly.com/users/teresia-omae.",    // e.g. "https://www.credly.com/users/your-name"  (leave "" to hide)
     behance: "",             // optional, e.g. "https://www.behance.net/your-name"
     cv: "assets/Teresia_Kemunto_Omae_CV.pdf",
     photo: "assets/profile.jpg",   // drop a photo at this path; initials show until then
@@ -37,8 +37,8 @@ window.SITE = {
 
   about: [
     "I'm an Electronic and Computer Engineering graduate from JKUAT with hands-on experience in first-level IT support, network monitoring, hardware and software troubleshooting, database support and technical operations.",
-    "At Poa! Internet I supported a Network Operations Centre, watching live IP networks across 50+ distribution points, troubleshooting connectivity incidents and escalating faults to protect service-level targets. Before that I supported PHP-based system and database work, data migration, performance testing, backups and recovery planning.",
-    "Alongside engineering, I work as a graphic designer. I like clear visuals and tidy documentation as much as clean configs, and I bring a customer-focused, proactive approach to every incident I handle."
+    //"At Poa! Internet I supported a Network Operations Centre, watching live IP networks across 50+ distribution points, troubleshooting connectivity incidents and escalating faults to protect service-level targets. Before that I supported PHP-based system and database work, data migration, performance testing, backups and recovery planning.",
+    "Alongside engineering, I work part time as a graphic designer volunteer. I like clear visuals and tidy documentation as much as clean configs, and I bring a customer-focused, proactive approach to every incident I handle."
   ],
 
   /* ---------- Headline numbers (from your CV) ---------- */
@@ -102,14 +102,14 @@ window.SITE = {
     {
       icon: "network",
       title: "Networking & NOC",
-      text: "Live monitoring, incident triage and escalation across distributed IP networks.",
-      tags: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "Routers & switches", "Network monitoring"]
+      text: "Live monitoring, incident triage and escalation across distributed IP networks. Network device configurations.",
+      tags: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "TCP/IP", "VPN & IPSec" "Routers & switches configs", "Network monitoring"]
     },
     {
       icon: "shield",
       title: "Cybersecurity & Data Protection",
-      text: "Patching, backups and security awareness, currently deepening cloud and network security.",
-      tags: ["Patching", "Backups & recovery", "Security awareness", "Cloud & Network Security"]
+      text: "Security awareness, currently deepening cloud and network security.",
+      tags: ["Cyber Best Practises", "Backups & recovery", "Security awareness", "Cloud & Network Security"]
     },
     {
       icon: "server",
@@ -119,9 +119,9 @@ window.SITE = {
     },
     {
       icon: "code",
-      title: "Backend & Databases",
-      text: "Database configuration, migrations and performance tuning behind real platforms.",
-      tags: ["PHP", "Python (basic)", "Data migration", "Indexing & caching", "Performance testing"]
+      title: "Programming",
+      text: "Database configuration, Front-end development, migrations.",
+      tags: ["PHP", "Python ", "HTML", "CSS", "JavaScript" "Data migration", "Indexing & caching", "Performance testing"]
     },
     {
       icon: "bolt",
@@ -133,7 +133,7 @@ window.SITE = {
       icon: "palette",
       title: "Graphic Design",
       text: "Brand visuals, posters and social graphics with an engineer's eye for structure.",
-      tags: ["Branding", "Posters & flyers", "Social media graphics", "Layout"]
+      tags: ["PhotoShop", "Canva", "Branding", "Posters & flyers", "Social media graphics."]
     }
   ],
 
@@ -208,11 +208,11 @@ window.SITE = {
 
   /* ---------- Toolbox ---------- */
   tools: [
-    { group: "Networking", items: ["IP addressing", "DNS", "DHCP", "LAN / WAN", "Routers & switches", "Network monitoring"] },
-    { group: "Systems", items: ["Windows Administration", "Linux", "Active Directory", "OS imaging", "Patching & updates"] },
-    { group: "Code & Data", items: ["PHP", "Python (basic)", "SQL / databases", "Data migration", "Performance testing"] },
+    { group: "Networking", items: ["IP addressing", "DNS", "DHCP", "LAN / WAN", "VLAN", "VPN/IPSec", "Wireshark", "Packet Tracer"] },
+    { group: "Systems", items: ["Windows Admin", "Linux", "Active Directory", "OS imaging", "Patching & updates"] },
+    { group: "Programming", items: ["PHP", "Python ", "HTML/CSS/JS", "SQL", "Data migration"] },
     { group: "Security", items: ["Backups & recovery", "Cybersecurity awareness", "Cloud security (learning)"] },
-    { group: "Creative", items: ["Graphic design", "Branding", "Layout & typography"] },
+    { group: "Graphic Design", items: ["PhotoShop", "Canva", "CapCut", "DaVinci Resolve" "Branding", "Video Editing"] },
     { group: "Industrial", items: ["Motors", "Generators", "Industrial control systems"] }
   ]
 };
