@@ -187,6 +187,7 @@ window.SITE = {
      2. Add a line below. Leave the list empty to show a friendly placeholder.        */
   designs: [
     // { title: "Event poster", type: "Poster", image: "assets/designs/poster-1.jpg" },
+     { title: "Event poster". type: "Poster", image: "assets/designs/poster-1.png },
   ],
 
   /* ---------- Certifications & short courses ----------
