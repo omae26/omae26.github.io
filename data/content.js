@@ -13,7 +13,7 @@ window.SITE = {
     shortName: "Teresia",
     initials: "TK",
     title: "Electronic & Computer Engineer",
-    roles: ["Technical Support", "Network Operations", "Cloud & Network Security", "Graphic Design"],
+    roles: ["Technical Support", "Network Operations", "SOC Analysis", "Cloud & Network Security", "Graphic Design"],
     location: "Nairobi, Kenya",
     email: "teresiakemunto8@gmail.com",
     phone: "+254 796 173 506",
@@ -108,8 +108,8 @@ window.SITE = {
     {
       icon: "shield",
       title: "Cybersecurity & Data Protection",
-      text: "Security awareness, currently deepening cloud and network security.",
-      tags: ["Cyber Best Practises", "Backups & recovery", "Security awareness", "Cloud & Network Security"]
+      text: "Security awareness and SOC fundamentals, currently deepening cloud and network security.",
+      tags: ["SOC analysis", "Wazuh SIEM", "MITRE ATT&CK", "Log analysis", "Digital forensics (intro)", "Cyber Best Practises", "Backups & recovery", "Cloud & Network Security"]
     },
     {
       icon: "server",
@@ -145,7 +145,7 @@ window.SITE = {
     title: "Cloud & Network Security",
     provider: "Cybershujaa",
     series: "cybershujaa",
-    text: "A hands-on programme where every topic comes with a lab and a written report. The labs below are the ones I have completed so far, newest first.",
+    text: "A hands-on programme where every topic comes with a lab and a written report. My completed labs are listed below, newest first.",
     focus: ["Network fundamentals (OSI & TCP/IP)", "Packet & traffic analysis", "Routing & switching", "VPNs & IPsec"]
   },
 
@@ -153,6 +153,24 @@ window.SITE = {
      category: "networking" | "security" | "development" | "systems" | "design"
      Add links: [{ label: "Source", url: "https://github.com/..." }]  (optional)       */
   projects: [
+
+    /* ===== SOC masterclass (Oct 2026) ===== */
+    {
+      title: "CyberHer Africa SOC Masterclass",
+      category: "soc",
+      featured: true,
+      status: "Masterclass · Oct 2026",
+      problem: "Detect, investigate and document attacks the way a SOC analyst does.",
+      text: "Completed a 4-week, scenario-based Security Operations masterclass on the CTFROOM RangeTime platform, run with CyberHer, the Internet Society Kenya, Swift Limited and CyberYetu. Solved 76 of 91 challenges across 6 scenarios mapped to 13 SOC skills, scoring 1,344 of 1,484 points and ranking 52nd of 332 participants.",
+      highlights: [
+        "Investigated Linux logs (16 of 17 challenges) and Windows systems (all 9 administration challenges, plus service investigation).",
+        "Collected forensic artefacts from compromised systems (11 of 11), analysed the file system, and built event timelines.",
+        "Mapped attacker behaviour to the MITRE ATT&CK framework (7 of 7), and investigated account manipulation and authentication events.",
+        "Monitored and triaged alerts in Wazuh, an open-source SIEM and XDR platform (6 of 7)."
+      ],
+      tags: ["SOC", "Wazuh", "MITRE ATT&CK", "Log analysis", "Digital forensics", "Incident investigation"],
+      links: [{ label: "Verify certificate", url: "https://app.ctfroom.com/certverify" }]
+    },
 
     /* ===== Cybershujaa · Cloud & Network Security labs (newest first) ===== */
     {
@@ -295,11 +313,9 @@ window.SITE = {
     { title: "Network Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
     { title: "IT Customer Support Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
     { title: "Soft Skills Training", issuer: "McKinsey Forward Program", type: "course", status: "Completed", year: "", link: "", file: "", image: "" },
-    /* SOC training: fill in the details, then remove the // at the start of each line below.
-       "learned" shows as a short list of skills on the card.
-    // { title: "SOC Training (add the exact programme name)", issuer: "Provider name", type: "course", status: "Completed", year: "2026", link: "", file: "", image: "",
-    //   learned: ["Skill or topic 1", "Skill or topic 2", "Skill or topic 3"] },
-    */
+    { title: "CyberHer Africa: SOC Masterclass", issuer: "CTFROOM RangeTime · with Internet Society Kenya, Swift Limited & CyberYetu", type: "course", status: "Completed", year: "Oct 2026",
+      link: "https://app.ctfroom.com/certverify", file: "", image: "assets/certs/cyberher-soc.jpg",
+      learned: ["Security Operations (SOC) skills, verified by the issuer (ID CTFR-EVT-E22E28EE1E)", "Linux and Windows log analysis, forensic collection, timelines", "MITRE ATT&CK mapping and Wazuh alert triage", "Qualified for 18 CPE points"] },
     { title: "Cloud & Network Security", issuer: "Cybershujaa", type: "course", status: "Ongoing", year: "", link: "", file: "", image: "",
       learned: ["OSI & TCP/IP, packet analysis with Wireshark and tcpdump", "Cisco routing, switching and site-to-site IPsec VPNs", "Hands-on labs with written reports every week"] }
   ],
@@ -309,7 +325,7 @@ window.SITE = {
     { group: "Networking", items: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "VLAN", "VPN/IPSec", "Wireshark", "tcpdump", "Cisco IOS CLI", "Packet Tracer"] },
     { group: "Systems", items: ["Windows Admin", "Linux", "Active Directory", "OS imaging", "Patching & updates"] },
     { group: "Programming", items: ["PHP", "Python ", "HTML/CSS/JS", "SQL", "Data migration"] },
-    { group: "Security", items: ["Network traffic analysis", "IPsec & ACLs", "Backups & recovery", "Cybersecurity awareness", "Cloud security (learning)"] },
+    { group: "Security", items: ["SOC analysis", "Wazuh (SIEM)", "MITRE ATT&CK", "Log analysis", "Network traffic analysis", "IPsec & ACLs", "Backups & recovery", "Cybersecurity awareness", "Cloud security (learning)"] },
     { group: "Graphic Design", items: ["PhotoShop", "Canva", "CapCut", "DaVinci Resolve", "Branding", "Video Editing"] },
     { group: "Industrial", items: ["Motors", "Generators", "Industrial control systems"] }
   ]

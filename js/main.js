@@ -94,7 +94,7 @@
   var uniq = function (a) { return a.filter(function (v, i) { return v && a.indexOf(v) === i; }); };
 
   /* ---------- Projects ---------- */
-  var catLabels = { networking: "Networking", security: "Security", development: "Development", systems: "Systems", design: "Design" };
+  var catLabels = { soc: "SOC", networking: "Networking", security: "Security", development: "Development", systems: "Systems", design: "Design" };
   function renderProjects(cat) {
     var list = S.projects.filter(function (p) { return cat === "all" || p.category === cat; });
     $("#projGrid").innerHTML = list.length ? list.map(function (p, i) {
