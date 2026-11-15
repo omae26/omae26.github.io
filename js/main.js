@@ -98,10 +98,18 @@
   function renderProjects(cat) {
     var list = S.projects.filter(function (p) { return cat === "all" || p.category === cat; });
     $("#projGrid").innerHTML = list.length ? list.map(function (p, i) {
-      return '<article class="proj rv in"><div class="proj-top"><b>#' + String(i + 1).padStart(2, "0") + " · " + esc(catLabels[p.category] || p.category) + '</b><span class="pill">' + esc(p.status) + "</span></div><h3>" + esc(p.title) + '</h3><p class="prob">' + esc(p.problem) + '</p><p class="d">' + esc(p.text) + '</p><div class="tags">' + (p.tags || []).map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("") + "</div>" +
+      return '<article class="proj rv in' + (p.featured ? " feat" : "") + '"><div class="proj-top"><b>#' + String(i + 1).padStart(2, "0") + " · " + esc(catLabels[p.category] || p.category) + '</b><span class="pill">' + (p.featured ? "★ " : "") + esc(p.status) + "</span></div><h3>" + esc(p.title) + '</h3><p class="prob">' + esc(p.problem) + '</p><p class="d">' + esc(p.text) + "</p>" +
+        ((p.highlights && p.highlights.length) ? '<ul class="hl">' + p.highlights.map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") + "</ul>" : "") + '<div class="tags">' + (p.tags || []).map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("") + "</div>" +
         ((p.links && p.links.length) ? '<div class="links">' + p.links.map(function (l) { return '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + " ↗</a>"; }).join("") + "</div>" : "") + "</article>";
     }).join("") : '<div class="empty"><b>No projects here yet</b>Add one in <code>data/content.js</code></div>';
   }
+  (function () {
+    var L = S.learning; if (!L) return;
+    var n = S.projects.filter(function (p) { return p.series === L.series; }).length;
+    var d = document.createElement("div"); d.className = "learning";
+    d.innerHTML = '<div class="l-main"><span class="l-tag"><i></i>' + esc(L.label) + "</span><h3>" + esc(L.title) + " <small>· " + esc(L.provider) + "</small></h3><p>" + esc(L.text) + '</p><div class="tags">' + (L.focus || []).map(function (f) { return "<span>" + esc(f) + "</span>"; }).join("") + '</div></div><div class="l-count"><b>' + n + '</b><span>hands-on labs<br>completed</span></div>';
+    $("#projFilters").parentNode.insertBefore(d, $("#projFilters"));
+  })();
   filters($("#projFilters"), uniq(S.projects.map(function (p) { return p.category; })), catLabels, renderProjects);
   renderProjects("all");
 
@@ -129,6 +137,7 @@
     $("#certGrid").innerHTML = list.map(function (c) {
       var ong = /ongoing/i.test(c.status);
       return '<article class="cert rv in"><div class="meta"><span>' + esc(c.type === "course" ? "COURSE" : "CERTIFICATION") + '</span><span class="st' + (ong ? " ongoing" : "") + '">' + (ong ? "◐ " : "✓ ") + esc(c.status) + (c.year ? " · " + esc(c.year) : "") + "</span></div><h3>" + esc(c.title) + '</h3><div class="iss">' + esc(c.issuer) + "</div>" +
+        ((c.learned && c.learned.length) ? '<ul class="hl small">' + c.learned.map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") + "</ul>" : "") +
         (c.image ? '<img loading="lazy" src="' + esc(c.image) + '" alt="' + esc(c.title) + ' certificate">' : "") +
         ((c.link || c.file) ? '<div class="cert-links">' + (c.link ? '<a class="view" href="' + esc(c.link) + '" target="_blank" rel="noopener">Verify credential ↗</a>' : "") + (c.file ? '<a class="view" href="' + esc(c.file) + '" target="_blank" rel="noopener">View certificate (PDF) ↗</a>' : "") + "</div>" : "") + "</article>";
     }).join("");

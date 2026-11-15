@@ -137,10 +137,102 @@ window.SITE = {
     }
   ],
 
+  /* ---------- "Currently learning" strip (shown above the projects) ----------
+     "series" must match the "series" value on the projects that belong to it.
+     The lab count is calculated automatically as you add more labs.                  */
+  learning: {
+    label: "Currently learning",
+    title: "Cloud & Network Security",
+    provider: "Cybershujaa",
+    series: "cybershujaa",
+    text: "A hands-on programme where every topic comes with a lab and a written report. The labs below are the ones I have completed so far, newest first.",
+    focus: ["Network fundamentals (OSI & TCP/IP)", "Packet & traffic analysis", "Routing & switching", "VPNs & IPsec"]
+  },
+
   /* ---------- Projects & case files ----------
      category: "networking" | "security" | "development" | "systems" | "design"
      Add links: [{ label: "Source", url: "https://github.com/..." }]  (optional)       */
   projects: [
+
+    /* ===== Cybershujaa · Cloud & Network Security labs (newest first) ===== */
+    {
+      title: "Site-to-Site IPsec VPN",
+      category: "security",
+      series: "cybershujaa",
+      featured: true,
+      status: "Lab · Week 5",
+      problem: "Protect traffic between two remote networks across an untrusted network.",
+      text: "Configured and verified an encrypted IPsec VPN tunnel between two Cisco routers (R1 and R3) through a pass-through router (R2), working entirely from the command line in Cisco Packet Tracer.",
+      highlights: [
+        "Activated the security licence package and defined the \"interesting traffic\" with an extended ACL covering the two LANs.",
+        "Built IKE Phase 1 (ISAKMP: AES-256, pre-shared key, Diffie-Hellman group 5) and Phase 2 (ESP with AES and SHA-HMAC transform set, crypto map).",
+        "Verified with show crypto ipsec sa: counters at zero before traffic, rising after pings between the LANs, and unchanged for traffic outside the VPN."
+      ],
+      tags: ["IPsec", "IKE / ISAKMP", "ACLs", "AES-256", "Cisco IOS CLI", "Packet Tracer"],
+      links: []
+    },
+    {
+      title: "Network Traffic Analysis (Hack The Box Academy)",
+      category: "security",
+      series: "cybershujaa",
+      status: "Module · Week 2",
+      problem: "Learn to read raw network traffic and spot what does not belong.",
+      text: "Completed the Introduction to Network Traffic Analysis module: capturing, filtering and investigating packets with Wireshark and tcpdump, from protocol fundamentals through to a guided investigation.",
+      highlights: [
+        "Worked through OSI and TCP/IP layers, TCP vs UDP, the three-way handshake, and common protocols (FTP, SMB, HTTP and HTTPS/TLS).",
+        "Used tcpdump and TShark capture and display filters, and read and wrote .pcap files; used Wireshark's Statistics and Analyze tools and followed TCP streams.",
+        "Analysed a packet capture end to end to find suspicious activity, and worked through decrypting an RDP session."
+      ],
+      tags: ["Wireshark", "tcpdump", "TShark", "TCP/IP", "Traffic analysis", "Hack The Box"],
+      links: [{ label: "Module completion", url: "https://academy.hackthebox.com/achievement/2896493/81" }]
+    },
+    {
+      title: "Switch & Router Network Build",
+      category: "networking",
+      series: "cybershujaa",
+      status: "Lab · Week 2",
+      problem: "Connect two separate networks and prove end-to-end connectivity.",
+      text: "Cabled and configured a small routed network (two PCs, a switch and a router) in Cisco Packet Tracer, then verified it with show commands.",
+      highlights: [
+        "Assigned static IPs and gateways, and explained why the first pings failed: the router acting as default gateway was not yet configured.",
+        "Configured the router interfaces and the switch hostname, VLAN 1 management interface and default gateway.",
+        "Confirmed end-to-end connectivity (PC to PC and switch to PC) and read the routing table and interface status with show ip route and show ip interface brief."
+      ],
+      tags: ["Cisco IOS", "Routing", "VLAN 1", "Static IP", "Packet Tracer"],
+      links: []
+    },
+    {
+      title: "Wireshark ICMP Capture & Analysis",
+      category: "networking",
+      series: "cybershujaa",
+      status: "Lab · Week 1",
+      problem: "See how local and remote traffic differ at the packet level.",
+      text: "Captured and analysed ICMP traffic in Wireshark on a live Wi-Fi interface, pinging the default gateway and external websites, and tied what I saw back to the network layers.",
+      highlights: [
+        "Applied an ICMP display filter and matched the Ethernet II source and destination MAC addresses to my PC and to the router.",
+        "Explained how ARP resolves an IP address to a MAC address on the local network.",
+        "Explained why local hosts show their real MAC addresses while remote traffic does not: it sits on a different network."
+      ],
+      tags: ["Wireshark", "ICMP", "ARP", "Ethernet II", "ipconfig"],
+      links: []
+    },
+    {
+      title: "TCP/IP & OSI Models in Action",
+      category: "networking",
+      series: "cybershujaa",
+      status: "Lab · Week 1",
+      problem: "Watch a web request travel through every layer of the model.",
+      text: "Built a web client and server in Cisco Packet Tracer, then used Simulation mode to follow an HTTP request packet by packet and inspect each layer.",
+      highlights: [
+        "Configured IPv4 addressing, the HTTP service and a DNS record, and tested the link with ping.",
+        "Inspected PDUs at each layer: the HTTP host (Layer 7), TCP ports (Layer 4), IP addresses (Layer 3) and MAC addresses (Layer 2).",
+        "Identified the ARP, TCP and HTTP events in the exchange, including how the TCP connection is closed."
+      ],
+      tags: ["OSI model", "TCP/IP", "HTTP", "DNS", "ARP", "Packet Tracer"],
+      links: []
+    },
+
+    /* ===== Work experience case files ===== */
     {
       title: "Live IP Network Monitoring",
       category: "networking",
@@ -199,19 +291,25 @@ window.SITE = {
      file (optional): a PDF in assets/certs/, e.g. "assets/certs/google-it.pdf".
      image (optional): a picture in assets/certs/, shown as a preview.         */
   certificates: [
-    { title: "Google IT Support Professional Certificate", issuer: "Coursera", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
+    { title: "Google IT Support Professional Certificate", issuer: "Coursera", type: "certification", status: "Ongoing", year: "", link: "", file: "", image: "" },
     { title: "Network Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
     { title: "IT Customer Support Basics", issuer: "Cisco Networking Academy", type: "certification", status: "Completed", year: "", link: "", file: "", image: "" },
     { title: "Soft Skills Training", issuer: "McKinsey Forward Program", type: "course", status: "Completed", year: "", link: "", file: "", image: "" },
-    { title: "Cloud & Network Security", issuer: "Cybershujaa", type: "course", status: "Ongoing", year: "", link: "", file: "", image: "" }
+    /* SOC training: fill in the details, then remove the // at the start of each line below.
+       "learned" shows as a short list of skills on the card.
+    // { title: "SOC Training (add the exact programme name)", issuer: "Provider name", type: "course", status: "Completed", year: "2026", link: "", file: "", image: "",
+    //   learned: ["Skill or topic 1", "Skill or topic 2", "Skill or topic 3"] },
+    */
+    { title: "Cloud & Network Security", issuer: "Cybershujaa", type: "course", status: "Ongoing", year: "", link: "", file: "", image: "",
+      learned: ["OSI & TCP/IP, packet analysis with Wireshark and tcpdump", "Cisco routing, switching and site-to-site IPsec VPNs", "Hands-on labs with written reports every week"] }
   ],
 
   /* ---------- Toolbox ---------- */
   tools: [
-    { group: "Networking", items: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "VLAN", "VPN/IPSec", "Wireshark", "Packet Tracer"] },
+    { group: "Networking", items: ["IP addressing", "DNS", "DHCP", "LAN/WAN", "VLAN", "VPN/IPSec", "Wireshark", "tcpdump", "Cisco IOS CLI", "Packet Tracer"] },
     { group: "Systems", items: ["Windows Admin", "Linux", "Active Directory", "OS imaging", "Patching & updates"] },
     { group: "Programming", items: ["PHP", "Python ", "HTML/CSS/JS", "SQL", "Data migration"] },
-    { group: "Security", items: ["Backups & recovery", "Cybersecurity awareness", "Cloud security (learning)"] },
+    { group: "Security", items: ["Network traffic analysis", "IPsec & ACLs", "Backups & recovery", "Cybersecurity awareness", "Cloud security (learning)"] },
     { group: "Graphic Design", items: ["PhotoShop", "Canva", "CapCut", "DaVinci Resolve", "Branding", "Video Editing"] },
     { group: "Industrial", items: ["Motors", "Generators", "Industrial control systems"] }
   ]
